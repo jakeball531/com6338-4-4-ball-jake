@@ -1,3 +1,11 @@
+/**
+ * The test will fail with the current iteration of this program, however I couldn't find a way to break it on my own.
+ * The issue stems from the words.splice() instances in the code. Without them, the test passes all but the last 3 conditions (again, couldnt get it to fail on my own)
+ * However, without the splices, the words don't get removed from the list after use. I decided to leave the splices in this iteration as this is the version where the game works as supposed to.
+ *
+ */
+
+
 var words = [
   'bananas',
   'grapes',
@@ -129,10 +137,6 @@ wordDashes = Array(currentWord.length).fill("_")
 wordToGuess.textContent = (wordDashes.join(""))
 remainingGuesses.textContent = (guesses)
 words.splice(wordNum, 1)
-
-console.log(words)
-console.log(currentWord)
-
 
 
 
